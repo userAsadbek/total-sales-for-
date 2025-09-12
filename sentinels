@@ -1,0 +1,19 @@
+#include <iostream>
+#include <iomanip>
+using namespace  std;
+int main() {
+    int game=1,
+    points,
+    total=0;
+    cout<<"Enter number of points your team earned\n";
+    cout<<"so far in this season.Enter -1 to finish \n";
+    cout<<"Enter points for game"<<game<<": ";
+    cin>>points;
+    while ( points !=-1) {
+        cout<<"Enter points for game"<<++game<<": ";
+        cin>>points;
+        total +=points;
+    }
+    cout<<"\nThe total number of points are  "<<total;
+    return 0;
+}
