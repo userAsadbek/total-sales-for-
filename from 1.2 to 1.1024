@@ -1,0 +1,19 @@
+#include <iostream>
+    #include <iomanip>
+#include <cmath>
+    using namespace  std;
+    int main() {
+       int number;
+
+        double sum=0;
+        double term=1.0/2;
+
+        cout<<"program will calculate 1/2 to 1/1024"<<endl;
+
+      for ( term; term>=1.0/1024; term /=2) {
+
+          cout<<fixed<<setprecision(10)<<"Term: "<<term<<endl;
+        sum+=term; }
+        cout<<"Sum : "<<sum<<endl;
+        return 0;
+    }
