@@ -1,0 +1,30 @@
+  #include <iostream>
+#include <iomanip>
+using namespace  std;
+int main() {
+    int test=1,
+    score,
+    total=0,count=0;
+    double avg;
+    cout<<"Enter test score i will tell you average" <<endl;
+
+    cout<<"SCORE for test "<<test<<" : ";
+    cin>>score;
+    while (score!=-99)
+    {
+        total += score;
+            count++;
+        cout<<"Score for test "<<++test<<":";
+        cin>>score;
+
+
+     }
+    if (total>0) {
+        avg=static_cast<double>(total)/test;
+
+        cout<<"Average is "<<avg<<endl;
+    }
+    else
+        cout<<"Invalid input"<<endl;
+    return 0;
+}
