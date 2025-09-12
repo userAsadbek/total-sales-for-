@@ -1,0 +1,16 @@
+#include <iostream>
+    #include <iomanip>
+    using namespace  std;
+    int main() {
+       int number=1;
+        int sum=0;
+
+        cout<<" program will calculate square of number 1 to 10"<<endl;
+
+        for (number;number<=10;number++) {
+            cout<<"Square of number "<<setw(2)<<number <<" is ";
+            cout<<setw(4)<<number*number<<endl;
+        sum += number*number; }
+        cout<<"The sum of numbers are "<<sum<<endl;
+        return 0;
+    }
