@@ -1,0 +1,46 @@
+#include <iostream>
+#include <cmath>
+#include <iomanip>
+using namespace std;
+int main() {
+    double loan,
+     rate,
+     moInteresrate,
+     years,
+     balance,
+     term,
+     payment;
+     int numpayments;
+    cout<<"Loan amount: $";
+    cin>>loan;
+    cout<<"Annual interest rate ( enter as a decimal): ";
+    cin>>rate;
+    cout<<"Years of loan";
+    cin>>years;
+numpayments=static_cast<int>(12*years);
+    moInteresrate=rate/12;
+term=pow(1+moInteresrate,numpayments);
+    payment=(loan*moInteresrate*term)/(term-1);
+    cout<<fixed<<showpoint<<setprecision(2);
+    cout<<"Monthly payment: "<<payment<<endl;
+ cout<<endl;
+    cout<<setw(5)<<"Month"<<setw(10)<<"Interest";
+    cout<<setw(10)<<"Principal"<<setw(9)<<"Balance"<<endl;
+    cout<<"-----------------------------------------\n";
+    balance=loan;
+    for (int month=1;month<=numpayments;month++) {
+        double moInterest,principal;
+        moInterest=moInteresrate*balance;
+        if (month!=numpayments)
+            principal=payment-moInterest;
+        else {
+            principal=balance;
+            payment=balance+moInterest;
+        }
+        balance-=principal;
+
+        cout<<setw(4)<<month<<setw(10)<<moInterest;
+        cout<<setw(10)<<principal<<setw(10)<<balance;
+    }
+    return 0;
+ }
