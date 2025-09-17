@@ -1,0 +1,226 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main() {
+      char light; // problem 10
+      cout<<"Enter light";
+      cin>>light;
+      switch (light) {
+      case 'g':cout<<"Go!";
+              break;
+      case 'y':cout<<"Get ready!";
+              break;
+      case 'r':cout<<"STOP!";
+              break;
+          default :cout<<"Invalid input!";
+  }
+      cout<<endl<<endl;
+     //problem 11
+      int grade;
+      cout << "Enter your grade: ";
+      cin >> grade;
+      switch (grade/10) {
+          case 10:cout<<"Your grade is A";
+              break;
+          case 9:cout<<"Your grade is A";
+              break;
+          case 8:cout<<"Your grade is B";
+              break;
+          case 7:cout<<"Your grade is C";
+              break;
+          case 6:cout<<"Your grade is D";
+              break;
+          case 5:
+          case 4:
+          case 3:
+          case 2:
+          case 1:
+          case 0:cout<<"Your grade is F";
+              break;
+          default:cout<<"Your grade is not valid ";
+      }
+   cout<<endl<<endl<<endl;
+    int a,b,c,angles;
+    cout<<"Enter three angles of triangle ";
+    cin>>a>>b>>c;
+    angles=a+b+c;
+  if (angles==180) {
+       cout<<"Valid triangle (sum=180)";
+   }
+  else
+      cout<<" Invalid triangle (sum="<<angles<<")";
+    cout<<endl<<endl;
+ 
+      char input;
+  cout<<"Enter character i will tell  you it is upper or lower case";
+      cin>>input;
+      if (int(input)>=65 && int(input)<=90) {
+          cout<<"It is Uppercase alphabet ";
+      }
+      else if (input>=97&&input<=122)
+      cout<<"It is lowercase alphabet ";
+      else
+          cout<<"it is not alphabet ";
+      cout<<endl<<endl;
+  double pack1,weight1,weight2,pack2;
+   cout<<"Enter the package 1 weight:";
+   cin>>weight1;
+   cout<<"Enter the price of package 1 :";
+   cin>>pack1;
+   cout<<"Enter the package 2 weight:";
+   cin>>weight2;
+   cout<<"ENTER the price of package 2 :";
+   cin>>pack2;
+   double price1=pack1/weight1,
+          price2=pack2/weight2;
+   if (price1>price2)
+       cout<<"\n Package 2 is better option ";
+   else if (price1<price2)
+       cout<<"\n Package 1 is better option ";
+   else
+       cout<<"\n They equal price";
+  cout<<endl<<endl;
+  int threedigits,reverse=0;
+     cout<<"Enter three digits numbers: ";
+     cin>>threedigits;
+   int orginal=threedigits;
+     while (threedigits>0) {
+         int digit=threedigits%10;
+         reverse=reverse*10+digit;
+      threedigits=threedigits/10; }
+         if(orginal==reverse) {
+            cout<<"It isa palindrome."<<endl;}
+            else
+               cout<<"It is not palindrome."<<endl;
+  // cout<<endl<<endl;
+      char language;
+        cout<<"Enter language option (u-Uzbek,r-Russian,e-English,b-Bolgoriya)";
+        cin>>language;
+       string lang;
+        switch(language) {
+            case 'u':lang="Uzbek";
+                break;
+            case 'e':lang="English";
+                break;
+            case 'r':lang="Russian";
+                break;
+            case 'b':lang="Bolgoriya";
+                break;
+            default:cout<<"I dont know this language"<<endl;
+        }
+        cout<<lang;
+     cout<<endl<<endl;
+  int r=10,x0=0,y0=0,x1,y1,line;
+     cout<<"Enter the value of x:";
+   cin>>x1;
+     cout<<"Enter the value of y:";
+   cin>>y1;
+     line=pow(x0-x1,2)+pow(y0-y1,2);
+     if (r*r>line) {
+         cout<<"Entered function is inner circle";}
+         else if (r*r==line) {
+             cout<<"Entered function on the circle";
+         }
+   else
+             cout<<"Entered function is outer circle";
+
+    double gpa;
+   cout<<"Enter GPA: ";
+   cin>>gpa;
+   int gpa1=gpa*10;
+   switch (gpa1){
+   case 40:
+   case 41:
+   case 42:
+   case 43:
+   case 44:
+   case  45:
+   cout<<"You got 80 percent scholarship";
+   break;
+   case 39:;
+   case 38:
+   case 37:
+   case 36:
+   case 35: cout<<"You got 60 percent scholarship";
+  break;
+   case 34:
+     case 33:
+   case 32:
+   case 31:
+   case 30:cout<<"You got 30 percent scholarship";
+   break;
+   default :cout<<"You entered an invalid gpa";
+   }
+ cout<<endl<<endl<<endl;
+ //problem 19
+  cout<<"Enter weight of the package in kilograms:"<<endl;
+  int w;
+  cin>>w;
+  if (w>0 && w<=1) {
+   cout<<"3000";
+  }
+  else if (w>1 && w<=3) {
+   cout<<"5500";
+  }
+  else if (w>3 && w<=10) {
+  cout<<"8500";
+ }
+   else if (w>10 && w<=20) {
+    cout<<"10500";
+   }
+   else if (w>20) {
+    cout<<"The package cannot be shipped";
+   }
+   else
+   {cout<<"Invalid input";}
+
+     switch (w) {
+         case 1:cout<<"3000 for shipping "<<endl;
+             break;
+         case 2:
+         case 3:cout<<"5500 for shipping "<<endl;
+             break;
+         case 4:
+         case 5:
+         case 6:
+         case 7:
+         case 8:
+         case 9:
+         case 10:cout<<"8500 for shipping "<<endl;
+             break;
+         case 11:
+             case 12:
+             case 13:
+             case 14:
+             case 15:
+             case 16:
+             case 17:
+             case 18:
+             case 19:
+             case 20:cout<<"10500 for shipping "<<endl;
+             break;
+         default:cout<<"We cant deliever weight more than 20 kg or less than 0 "<<endl;
+     }
+  cout<<"Enter date of day and i will tell you which holidays have ";
+  int date;
+     cin>>date;
+     switch(date) {
+         case 1:cout<<"I'm number one and I'm buqabek ";
+           break;
+         default:cout<<"I have to gain knowledge about dates and enter as switch case ";}
+     cout<<endl<<endl;
+ int day,futureday;
+    cout<<"what is  day today"<<endl;
+    cout<<"0.Sunday, 1.Monday,2.Tuesday,3.Wednesday,4.Thursday,5.Friday,6.Saturday";
+    cin>>day;
+    if (day>=0 && day<=6) {
+        cout<<"How many days you going to forward";
+        cin>>futureday;
+
+        cout<<"You will "<<(day+futureday)%7;
+    }
+    else
+        cout<<"Invalid input ";
+     return 0;
+
+}
