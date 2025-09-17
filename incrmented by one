@@ -1,0 +1,20 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main() {
+    char doAgain;
+    int sum=0;
+    do {
+        cout<<"This code will increment sum 1 or more times.\n";
+        cout<<"Sum has incremented.Increment it again(y/n)?\n";
+        cin>>doAgain;
+        sum+=1;
+    }
+
+    while(doAgain == 'y' || doAgain == 'Y');
+
+    cout<<"SUM was incremented "<<sum<<" times.\n ";
+
+     return 0;
+
+}
